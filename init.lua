@@ -10,4 +10,6 @@ require("jvasata.plugins.lualine")
 require("jvasata.plugins.nvim-cmp")
 require("jvasata.plugins.lsp.mason")
 require("jvasata.plugins.lsp.lspconfig")
+require("jvasata.plugins.autopairs")
+require("jvasata.plugins.treesitter")
 

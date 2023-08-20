@@ -12,29 +12,29 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
-        config = function () 
+        config = function ()
             local configs = require("nvim-treesitter.configs")
 
-        configs.setup({
-            ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html" },
-            sync_install = false,
-            highlight = { enable = true },
-            indent = { enable = true },  
-        })
+            configs.setup({
+                ensure_installed = { "c", "lua", "vim", "vimdoc", "javascript", "html" },
+                sync_install = false,
+                highlight = { enable = true },
+                indent = { enable = true },
+            })
         end
     },
     "christoomey/vim-tmux-navigator", -- Ctrl + motions to change split focus
-    
+
     "tpope/vim-surround",
-    
+
     "vim-scripts/ReplaceWithRegister", -- gr + motion
-    
+
     "nvim-tree/nvim-tree.lua",
-    
+
     "nvim-tree/nvim-web-devicons",
-    
+
     "nvim-lualine/lualine.nvim",
-    
+
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-path",
@@ -49,7 +49,7 @@ return {
     { "windwp/nvim-ts-autotag", after = "nvim-treesitter" }, -- autoclose tags
 
     -- managing & installing lsp servers, linters & formatters
-    "williamboman/mason.nvim", 
+    "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
 
     { "VonHeikemen/lsp-zero.nvim",
@@ -58,6 +58,6 @@ return {
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-nvim-lua",
 
-        }    
-    }
+        }
+    },
 }
