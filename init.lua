@@ -12,4 +12,4 @@ require("jvasata.plugins.lsp.mason")
 require("jvasata.plugins.lsp.lspconfig")
 require("jvasata.plugins.autopairs")
 require("jvasata.plugins.treesitter")
-
+require("jvasata.plugins.gitsigns")
