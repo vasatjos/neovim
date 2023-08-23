@@ -18,20 +18,22 @@ keymap.set("i", "<C-l>", "<C-o>l")
 keymap.set("i", "<C-w>", "<C-o>w")
 keymap.set("i", "<C-b>", "<C-o>b")
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("x", "<leader>p", [["_dP]]) -- paste over without replacing clipboard
-vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
-vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>fd", vim.lsp.buf.format)
+keymap.set("n", "J", "mzJ`z")
+keymap.set("n", "<C-d>", "<C-d>zz")
+keymap.set("n", "<C-u>", "<C-u>zz")
+keymap.set("n", "n", "nzzzv")
+keymap.set("n", "N", "Nzzzv")
+keymap.set("x", "<leader>p", [["_dP]]) -- paste over without replacing clipboard
+keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+keymap.set("n", "Q", "<nop>")
+keymap.set("n", "<leader>fd", vim.lsp.buf.format)
 
 
 
 -- plugin keymaps
 keymap.set("n", "<leader>rw", vim.cmd.NvimTreeToggle)
+keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols) -- [D]ocument [S]ymbols
+keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references)

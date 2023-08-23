@@ -17,4 +17,11 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 lsp.setup_nvim_cmp({
     mapping = cmp_mappings
 })
+
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+
+  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = true})
+end)
+
 lsp.setup()
