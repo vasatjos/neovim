@@ -35,7 +35,7 @@ opt.colorcolumn = "80"
 opt.backspace = "indent,eol,start"
 
 -- use system clipboard
-opt.clipboard = "unnamedplus"
+--opt.clipboard = "unnamedplus"
 
 -- split windows
 opt.splitright = true
