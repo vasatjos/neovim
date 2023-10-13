@@ -16,6 +16,5 @@ mason_lspconfig.setup({
     ensure_installed = {
         "clangd",
         "cmake",
-        "tsserver"
     }
 })
