@@ -10,11 +10,6 @@ if not luasnip_status then
   return
 end
 
--- import lspkind plugin safely
-local lspkind_status, lspkind = pcall(require, "lspkind")
-if not lspkind_status then
-  return
-end
 
 require ("luasnip/loaders/from_vscode").lazy_load()
 
