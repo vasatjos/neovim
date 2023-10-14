@@ -10,11 +10,16 @@ if not mason_lspconfig_status then
   return
 end
 
+local lsp = require("lsp-zero")
+
 mason.setup()
 
 mason_lspconfig.setup({
     ensure_installed = {
         "clangd",
         "cmake",
-    }
+    },
+    handlers = {
+        lsp.default_setup,
+    },
 })
