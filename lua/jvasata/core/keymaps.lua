@@ -16,10 +16,10 @@ keymap.set("n", "<leader>ch", ":nohl<CR>")  -- clear highlights
 keymap.set("n", "<leader>+", "<C-a>")
 keymap.set("n", "<leader>-", "<C-x>")
 
-keymap.set("i", "<C-h>", "<C-o>h")
-keymap.set("i", "<C-j>", "<C-o>j")
-keymap.set("i", "<C-k>", "<C-o>k")
-keymap.set("i", "<C-l>", "<C-o>l")
+keymap.set("i", "<C-h>", "<Left>")
+keymap.set("i", "<C-j>", "<Down>")
+keymap.set("i", "<C-k>", "<Up>")
+keymap.set("i", "<C-l>", "<Right>")
 keymap.set("i", "<C-w>", "<C-o>w")
 keymap.set("i", "<C-b>", "<C-o>b")
 
