@@ -26,6 +26,7 @@ return {
     "christoomey/vim-tmux-navigator", -- Ctrl + motions to change split focus
 
     "tpope/vim-surround",
+    "numToStr/Comment.nvim",
 
     "vim-scripts/ReplaceWithRegister", -- gr + motion
 
