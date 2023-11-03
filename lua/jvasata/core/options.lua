@@ -25,6 +25,7 @@ opt.swapfile = false
 opt.updatetime = 50
 
 opt.scrolloff = 8
+opt.sidescrolloff = 10
 
 --appearance
 opt.termguicolors = true
