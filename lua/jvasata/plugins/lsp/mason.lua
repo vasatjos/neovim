@@ -20,11 +20,9 @@ mason_lspconfig.setup({
         "clangd",
         "cmake",
         -- python
-        "blue",
-        "autopep8",
-        "flake8",
         "jedi_language_server",
-        "pylint",
+        "pylsp",
+            -- manualy install: mypy, pylint, blue, black
         -- Lua
         "lua_ls",
         -- web dev
