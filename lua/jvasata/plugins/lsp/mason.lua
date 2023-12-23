@@ -16,8 +16,23 @@ mason.setup()
 
 mason_lspconfig.setup({
     ensure_installed = {
+        -- C/C++
         "clangd",
         "cmake",
+        -- python
+        "blue",
+        "autopep8",
+        "flake8",
+        "jedi_language_server",
+        "pylint",
+        -- Lua
+        "lua_ls",
+        -- web dev
+        "html",
+        "cssls",
+        "tsserver",
+        -- bash
+        "bashls"
     },
     handlers = {
         lsp.default_setup,
