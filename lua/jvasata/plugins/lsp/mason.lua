@@ -20,7 +20,6 @@ mason_lspconfig.setup({
         "clangd",
         "cmake",
         -- python
-        "jedi_language_server",
         "pylsp",
             -- manualy install: mypy, pylint, blue, black
         -- Lua
