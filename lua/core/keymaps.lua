@@ -2,7 +2,7 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap
 
-keymap.set("n", "<leader>rw", vim.cmd.Ex) -- open Netrw
+-- keymap.set("n", "<leader>rw", vim.cmd.Ex) -- open Netrw, uncomment if not using a different file browser
 
 keymap.set("n", "x", '"_x')                 -- don't copy deleted characters
 
