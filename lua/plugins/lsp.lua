@@ -22,8 +22,7 @@ return {
                     "clangd",
                     "cmake",
                     -- python
-                    "pylsp",
-                    -- manualy install: mypy, pylint, blue, black
+                    "jedi_language_server",
                     -- Lua
                     "lua_ls",
                     -- web dev
@@ -57,5 +56,20 @@ return {
             end)
             lsp.setup()
         end
-    }
+    },
+    {
+        "nvimtools/none-ls.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "jay-babu/mason-null-ls.nvim"
+        },
+        config = function()
+            require("mason").setup()
+            require("null-ls").setup()
+            require("mason-null-ls").setup({
+                handlers = {},
+            })
+            vim.keymap.set("n", "<leader>afm", vim.lsp.buf.format, {}) -- [A]uto [f]or[m]at
+        end
+    },
 }

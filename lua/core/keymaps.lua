@@ -32,8 +32,7 @@ keymap.set("n", "<C-u>", "<C-u>zz")
 keymap.set("n", "n", "nzzzv")
 keymap.set("n", "N", "Nzzzv")
 keymap.set("x", "<leader>p", [["_dP]])       -- paste over without replacing clipboard
-keymap.set({"n", "v"}, "<leader>y", [["+y]]) -- system clipboard
+keymap.set({ "n", "v" }, "<leader>y", [["+y]]) -- system clipboard
 keymap.set("n", "<leader>Y", [["+Y]])        -- system clipboard
 keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 keymap.set("n", "Q", "<nop>")
-keymap.set("n", "<leader>fd", vim.lsp.buf.format)
