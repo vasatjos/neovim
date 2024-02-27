@@ -42,3 +42,18 @@ opt.backspace = "indent,eol,start"
 -- split windows
 opt.splitright = true
 opt.splitbelow = true
+
+-- suppress certain warnings
+local notify = vim.notify
+vim.notify = function(msg, ...)
+    -- LSP floating docs warning
+    if msg:match("warning: multiple different client offset_encodings") then
+        return
+    end
+    -- Git diff split warning
+    if msg:match("^%[null%-ls%] failed to run generator:") then
+        return
+    end
+
+    notify(msg, ...)
+end
