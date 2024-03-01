@@ -31,7 +31,7 @@ return {
             { desc = "Open harpoon window" })
 
         vim.keymap.set("n", "<leader>a", function() harpoon:list():append() end)
-        vim.keymap.set("n", "<leader>e", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+        vim.keymap.set("n", "<leader>h", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
         vim.keymap.set("n", "<leader>+", function() harpoon:list():select(1) end)
         vim.keymap.set("n", "<leader>1", function() harpoon:list():select(1) end)
