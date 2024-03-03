@@ -1,7 +1,25 @@
 return {
     {
         "williamboman/mason.nvim",
-        config = true
+        config = function ()
+            require("mason").setup({
+                ensure_installed = {
+                    -- C/C++
+                    "clangd",
+                    "cmake",
+                    -- python
+                    "jedi_language_server",
+                    -- Lua
+                    "lua_ls",
+                    -- web dev
+                    "html",
+                    "cssls",
+                    "tsserver",
+                    -- bash
+                    "bashls"
+                }
+            })
+        end
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -17,21 +35,6 @@ return {
             local lsp = require("lsp-zero")
             local mason_lspconfig = require("mason-lspconfig")
             mason_lspconfig.setup({
-                ensure_installed = {
-                    -- C/C++
-                    "clangd",
-                    "cmake",
-                    -- python
-                    "jedi_language_server",
-                    -- Lua
-                    "lua_ls",
-                    -- web dev
-                    "html",
-                    "cssls",
-                    "tsserver",
-                    -- bash
-                    "bashls"
-                },
                 handlers = {
                     lsp.default_setup,
                 },
