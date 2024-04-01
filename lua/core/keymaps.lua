@@ -26,6 +26,9 @@ keymap.set("i", "<C-b>", "<C-o>b")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+keymap.set("n", "yA", "ggVGy")              -- yank all
+keymap.set("n", "<leader>yA", 'ggVG"+y')    -- yank all to system clipboard
+
 keymap.set("n", "J", "mzJ`z")
 keymap.set("n", "<C-d>", "<C-d>zz")
 keymap.set("n", "<C-u>", "<C-u>zz")
