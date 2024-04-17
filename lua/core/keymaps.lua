@@ -11,7 +11,7 @@ keymap.set("n", "<leader>sh", "<C-w>s")     -- horizontal split
 keymap.set("n", "<leader>se", "<C-w>=")     -- set width equal
 keymap.set("n", "<leader>sx", ":close<CR>") -- close
 
-keymap.set("n", "<leader>ch", ":nohl<CR>")  -- clear highlights
+keymap.set("n", "<Esc>", ":nohl<CR>")  -- clear highlights
 
 keymap.set("n", "<leader><leader>+", "<C-a>")
 keymap.set("n", "<leader><leader>-", "<C-x>")

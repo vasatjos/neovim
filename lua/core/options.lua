@@ -18,7 +18,7 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 opt.incsearch = true
-opt.hlsearch = false
+opt.hlsearch = true
 
 opt.cursorline = true
 
@@ -57,3 +57,13 @@ vim.notify = function(msg, ...)
 
     notify(msg, ...)
 end
+
+-- Highlight when yanking (copying) text
+--  See `:help vim.highlight.on_yank()`
+vim.api.nvim_create_autocmd('TextYankPost', {
+  desc = 'Highlight when yanking (copying) text',
+  group = vim.api.nvim_create_augroup('kickstart-highlight-yank', { clear = true }),
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
