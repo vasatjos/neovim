@@ -28,10 +28,10 @@ return {
                     ["<C-n>"] = cmp.mapping.select_next_item(), -- next suggestion
                     ["<C-b>"] = cmp.mapping.scroll_docs(-4),
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
-                    ["<C-y"] = cmp.mapping.confirm({ select = false }), -- unmap C-y
                     ["<C-Space>"] = cmp.mapping.complete(),             -- show completion suggestions
                     ["<C-e>"] = cmp.mapping.abort(),                    -- close completion window
                     ["<Tab>"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-y"] = cmp.mapping.confirm({ select = true }),
                     ["<CR>"] = cmp.mapping.confirm({ select = false }),
                 }),
 
