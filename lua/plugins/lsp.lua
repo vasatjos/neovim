@@ -8,7 +8,7 @@ return {
                     "clangd",
                     "cmake",
                     -- python
-                    "jedi_language_server",
+                    "pyright",
                     -- Lua
                     "lua_ls",
                     -- web dev
