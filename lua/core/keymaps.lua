@@ -13,9 +13,6 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close
 
 keymap.set("n", "<Esc>", ":nohl<CR>")  -- clear highlights
 
-keymap.set("n", "<leader><leader>+", "<C-a>")
-keymap.set("n", "<leader><leader>-", "<C-x>")
-
 keymap.set("i", "<C-h>", "<Left>")
 keymap.set("i", "<C-j>", "<Down>")
 keymap.set("i", "<C-k>", "<Up>")
