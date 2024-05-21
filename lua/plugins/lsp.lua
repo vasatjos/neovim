@@ -9,6 +9,7 @@ return {
                     "cmake",
                     -- python
                     "pyright",
+                    "black",
                     -- Lua
                     "lua_ls",
                     -- web dev
