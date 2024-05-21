@@ -45,5 +45,9 @@ return {
         vim.keymap.set("n", "<leader>5", function() harpoon:list():select(5) end)
         vim.keymap.set("n", "<leader>ž", function() harpoon:list():select(6) end)
         vim.keymap.set("n", "<leader>6", function() harpoon:list():select(6) end)
+        vim.keymap.set("n", "<leader>ý", function() harpoon:list():select(7) end)
+        vim.keymap.set("n", "<leader>7", function() harpoon:list():select(7) end)
+        vim.keymap.set("n", "<leader>á", function() harpoon:list():select(8) end)
+        vim.keymap.set("n", "<leader>8", function() harpoon:list():select(8) end)
     end
 }
