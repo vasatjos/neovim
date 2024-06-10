@@ -16,6 +16,8 @@ return {
                     "html",
                     "cssls",
                     "tsserver",
+                    "prettierd",
+                    "eslint_d",
                     -- bash
                     "bashls"
                 }
