@@ -6,7 +6,7 @@ return {
                 expr = true,
                 replace_keycodes = false
             })
-            vim.keymap.set('i', '<M-z>', 'copilot#Accept("\\<CR>")', {
+            vim.keymap.set('i', '<M-y>', 'copilot#Accept("\\<CR>")', {
                 expr = true,
                 replace_keycodes = false
             })
