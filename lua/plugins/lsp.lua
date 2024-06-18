@@ -1,28 +1,7 @@
 return {
     {
         "williamboman/mason.nvim",
-        config = function ()
-            require("mason").setup({
-                ensure_installed = {
-                    -- C/C++
-                    "clangd",
-                    "cmake",
-                    -- python
-                    "pyright",
-                    "black",
-                    -- Lua
-                    "lua_ls",
-                    -- web dev
-                    "html",
-                    "cssls",
-                    "tsserver",
-                    "prettierd",
-                    "eslint_d",
-                    -- bash
-                    "bashls"
-                }
-            })
-        end
+        config = true
     },
     {
         "williamboman/mason-lspconfig.nvim",
@@ -38,6 +17,21 @@ return {
             local lsp = require("lsp-zero")
             local mason_lspconfig = require("mason-lspconfig")
             mason_lspconfig.setup({
+                ensure_installed = {
+                    -- C/C++
+                    "clangd",
+                    "cmake",
+                    -- python
+                    "pyright",
+                    -- Lua
+                    "lua_ls",
+                    -- web dev
+                    "html",
+                    "cssls",
+                    "tsserver",
+                    -- bash
+                    "bashls"
+                },
                 handlers = {
                     lsp.default_setup,
                 },
@@ -85,6 +79,11 @@ return {
             require("mason").setup()
             require("null-ls").setup()
             require("mason-null-ls").setup({
+                ensure_installed = {
+                    "black",
+                    "prettierd",
+                    "eslint_d",
+                },
                 handlers = {},
             })
             vim.keymap.set("n", "<leader>afm", vim.lsp.buf.format, {}) -- [A]uto [f]or[m]at
