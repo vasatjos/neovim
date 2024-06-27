@@ -10,7 +10,7 @@ return {
                 globalstatus = true,
             },
             sections = {
-                lualine_x = { 'filetype' },     -- remove encoding and fileformat
+                lualine_x = { 'filetype' }, -- removed encoding and fileformat
             },
         })
     end,

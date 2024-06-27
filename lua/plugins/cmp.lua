@@ -31,7 +31,7 @@ return {
                     ["<C-Space>"] = cmp.mapping.complete(),             -- show completion suggestions
                     ["<C-e>"] = cmp.mapping.abort(),                    -- close completion window
                     ["<Tab>"] = cmp.mapping.confirm({ select = true }),
-                    ["<C-y"] = cmp.mapping.confirm({ select = true }),
+                    ["<C-y>"] = cmp.mapping.confirm({ select = true }),
                     ["<CR>"] = cmp.mapping.confirm({ select = false }),
                 }),
 

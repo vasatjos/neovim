@@ -12,7 +12,7 @@ return {
             builtin.grep_string({ search = vim.fn.input ("Find word: ") })
         end)
         vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
-        vim.keymap.set("n", "<leader>ds", require("telescope.builtin").lsp_document_symbols) -- [D]ocument [S]ymbols
-        vim.keymap.set("n", "<leader>fr", require("telescope.builtin").lsp_references)
+        vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols) -- [D]ocument [S]ymbols
+        vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
     end,
 }

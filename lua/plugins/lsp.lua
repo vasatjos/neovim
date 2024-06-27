@@ -29,7 +29,7 @@ return {
                     "html",
                     "cssls",
                     "tsserver",
-                    -- bash
+                    -- shell
                     "bashls"
                 },
                 handlers = {
@@ -80,7 +80,9 @@ return {
             require("null-ls").setup()
             require("mason-null-ls").setup({
                 ensure_installed = {
+                    -- python
                     "black",
+                    -- web dev
                     "prettierd",
                     "eslint_d",
                 },
