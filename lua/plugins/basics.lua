@@ -34,8 +34,4 @@ return {
     },
     "christoomey/vim-tmux-navigator",
     "tpope/vim-surround",
-    {
-        "numToStr/Comment.nvim",
-        config = true
-    },
 }
