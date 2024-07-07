@@ -24,8 +24,7 @@ return {
                 contrast = "",  -- can be "hard", "soft" or empty string
                 palette_overrides = {},
                 overrides = {
-                    SignColumn = { bg = "#282828" }, -- same as editor background
-                    String = { fg = "#fabd2f" }
+                    SignColumn = { bg = "#282828" } -- same as editor background
                 },
                 dim_inactive = false,
                 transparent_mode = false,
