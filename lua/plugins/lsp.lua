@@ -50,7 +50,7 @@ return {
             lsp.preset("recommended")
             lsp.on_attach(function(_, bufnr)
                 lsp.default_keymaps({ buffer = bufnr })
-                vim.keymap.set('n', 'gd',require("telescope.builtin").lsp_definitions, { buffer = true })
+                vim.keymap.set('n', 'gd', require("telescope.builtin").lsp_definitions, { buffer = true })
                 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, { buffer = true })
                 vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, { buffer = true })
                 vim.keymap.set('n', '<leader>ds', require("telescope.builtin").lsp_document_symbols, { buffer = true })
@@ -75,6 +75,7 @@ return {
             "williamboman/mason.nvim",
             "jay-babu/mason-null-ls.nvim"
         },
+        event = "VeryLazy",
         config = function()
             require("mason").setup()
             require("null-ls").setup()
