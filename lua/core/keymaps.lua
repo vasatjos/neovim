@@ -11,7 +11,7 @@ map("n", "<leader>sh", "<C-w>s")     -- horizontal split
 map("n", "<leader>se", "<C-w>=")     -- set width equal
 map("n", "<leader>sx", ":close<CR>") -- close
 
-map("n", "<Esc>", ":nohl<CR>")  -- clear highlights
+map("n", "<Esc>", ":nohl<CR>")       -- clear highlights
 
 map("i", "<C-h>", "<Left>")
 map("i", "<C-j>", "<Down>")
@@ -23,8 +23,9 @@ map("i", "<C-b>", "<C-o>b")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
-map("n", "yA", "ggVGy")              -- yank all
-map("n", "<leader>yA", 'ggVG"+y')    -- yank all to system clipboard
+map("n", "yA", "ggVGy")                     -- yank all
+map("n", "<leader>yA", 'ggVG"+y')           -- yank all to system clipboard
+map({ "n", "v" }, "<leader><leader>p", '"+p') -- paste from system clipboard
 
 map("n", "<Up>", vim.cmd.cprev)
 map("n", "<Down>", vim.cmd.cnext)
@@ -34,8 +35,8 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-map("x", "<leader>p", [["_dP]])       -- paste over without replacing clipboard
+map("x", "<leader>p", [["_dP]])         -- paste over without replacing clipboard
 map({ "n", "v" }, "<leader>y", [["+y]]) -- system clipboard
-map("n", "<leader>Y", [["+Y]])        -- system clipboard
+map("n", "<leader>Y", [["+Y]])          -- system clipboard
 map({ "n", "v" }, "<leader>d", [["_d]])
 map("n", "Q", "<nop>")
