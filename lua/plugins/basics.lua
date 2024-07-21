@@ -34,4 +34,10 @@ return {
     },
     "christoomey/vim-tmux-navigator",
     "tpope/vim-surround",
+    {
+        "norcalli/nvim-colorizer.lua",
+        config = function()
+            require("colorizer").setup()
+        end,
+    },
 }
