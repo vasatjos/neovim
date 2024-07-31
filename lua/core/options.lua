@@ -1,3 +1,5 @@
+require("core.statusline")
+
 local opt = vim.opt
 
 -- line numbers
