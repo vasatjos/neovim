@@ -57,7 +57,7 @@ local function statusline()
     local linecol = " %l:%c"
 
     return string.format(
-        "%s %s %s%s %s %s%s %s %s %s ",
+        "%s %s %s%s%s %s%s %s %s %s ",
         set_color_1,
 
         branch,
@@ -77,6 +77,7 @@ local function statusline()
     )
 end
 
+vim.opt.laststatus = 3
 vim.opt.statusline = statusline()
 
 -- Update statusline on diagnostic changes
