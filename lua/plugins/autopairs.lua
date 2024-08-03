@@ -11,7 +11,9 @@ return {
     },
     config = function()
         local autopairs = require("nvim-autopairs")
-        autopairs.setup()
+        autopairs.setup({
+            map_bs = false,
+        })
         local cmp_autopairs = require("nvim-autopairs.completion.cmp")
         local cmp = require("cmp")
         -- make autopairs and completion work together
