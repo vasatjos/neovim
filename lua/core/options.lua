@@ -1,4 +1,5 @@
 require("core.statusline")
+require("core.netrw")
 
 local opt = vim.opt
 

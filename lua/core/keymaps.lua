@@ -2,8 +2,6 @@ vim.g.mapleader = " "
 
 local map = vim.keymap.set
 
--- map("n", "<leader>rw", vim.cmd.Ex) -- open Netrw, uncomment if not using a different file browser
-
 map("n", "x", '"_x')                 -- don't copy deleted characters
 
 map("n", "<leader>sv", "<C-w>v")     -- vertical split
