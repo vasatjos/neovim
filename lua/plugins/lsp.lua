@@ -30,7 +30,9 @@ return {
                     "cssls",
                     "tsserver",
                     -- shell
-                    "bashls"
+                    "bashls",
+                    -- rust
+                    "rust_analyzer",
                 },
                 handlers = {
                     lsp.default_setup,
