@@ -16,7 +16,7 @@ vim.g.netrw_winsize = 25
 -- Directories first
 vim.g.netrw_sort_sequence = [[[\/]$,*]]
 
--- Enable recursive copy of directories in
+-- Enable recursive copy of directories
 vim.g.netrw_localcopydircmd = "cp -r"
 
 -- Enable recursive creation of directories

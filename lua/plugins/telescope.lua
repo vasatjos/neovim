@@ -8,10 +8,7 @@ return {
     config = function()
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>ff", builtin.find_files, {}) -- find file
-        vim.keymap.set("n", "<leader>fw", function()              -- find word
-            builtin.grep_string({ search = vim.fn.input("Find word: ") })
-        end)
-        vim.keymap.set("n", "<leader>lg", builtin.live_grep, {})
+        vim.keymap.set("n", "<leader>fw", builtin.live_grep, {}) -- find word
         vim.keymap.set("n", "<leader>ds", builtin.lsp_document_symbols) -- [D]ocument [S]ymbols
         vim.keymap.set("n", "<leader>fr", builtin.lsp_references)
         vim.keymap.set("n", "<leader>fh", function()
