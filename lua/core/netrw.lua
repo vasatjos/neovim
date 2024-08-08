@@ -1,4 +1,5 @@
-vim.keymap.set("n", "<leader>rw", vim.cmd.Lex)
+-- vim.keymap.set("n", "<leader>rw", vim.cmd.Lex)
+vim.keymap.set("n", "<leader>rw", vim.cmd.Ex)
 
 -- Set the banner to be off
 vim.g.netrw_banner = 0
@@ -8,10 +9,11 @@ vim.g.netrw_banner = 0
 -- 1 : file per line with timestamp information and file size
 -- 2 : multiple files in columns
 -- 3 : tree style listing
-vim.g.netrw_liststyle = 3
+-- vim.g.netrw_liststyle = 3
+vim.g.netrw_liststyle = 0
 
 -- Set window width
-vim.g.netrw_winsize = 25
+-- vim.g.netrw_winsize = 25
 
 -- Directories first
 vim.g.netrw_sort_sequence = [[[\/]$,*]]
