@@ -17,5 +17,6 @@ return {
                 find_command = { 'fd', '--type', 'f', '--hidden', '--exclude', '.git' },
             })
         end)
+        vim.keymap.set("n", "<leader>fg", builtin.git_files)
     end,
 }

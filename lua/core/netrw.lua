@@ -26,3 +26,5 @@ vim.g.netrw_localmkdir = "mkdir -p"
 
 -- Enable recursive removal of directories
 vim.g.netrw_localrmdir = "rm -r"
+
+vim.g.netrw_keepdir = 0
