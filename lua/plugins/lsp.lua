@@ -33,6 +33,8 @@ return {
                     "bashls",
                     -- rust
                     "rust_analyzer",
+                    --java
+                    "jdtls",
                 },
                 handlers = {
                     lsp.default_setup,
