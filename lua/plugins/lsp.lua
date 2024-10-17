@@ -33,7 +33,7 @@ return {
                     "bashls",
                     -- rust
                     "rust_analyzer",
-                    --java
+                    -- java
                     "jdtls",
                 },
                 handlers = {
@@ -89,6 +89,8 @@ return {
                     -- web dev
                     "prettierd",
                     "eslint_d",
+                    -- java
+                    "sonarlint-language-server",
                 },
                 handlers = {},
             })
