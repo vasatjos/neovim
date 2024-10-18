@@ -68,6 +68,7 @@ return {
                 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { buffer = true })
             end)
             lsp.setup()
+            require("lspconfig").racket_langserver.setup({})
         end
     },
     {
