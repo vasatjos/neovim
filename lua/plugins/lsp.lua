@@ -28,7 +28,7 @@ return {
                     -- web dev
                     "html",
                     "cssls",
-                    "tsserver",
+                    "ts_ls",
                     -- shell
                     "bashls",
                     -- rust
