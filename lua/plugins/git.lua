@@ -1,6 +1,7 @@
 return {
     {
         "tpope/vim-fugitive",
+        event = "VeryLazy",
         config = function()
             vim.keymap.set("n", "<leader>gd", "<cmd>Gvdiffsplit!<CR>", {})
             vim.keymap.set("n", "<leader>gh", "<cmd>diffget //2<CR>")
