@@ -49,7 +49,6 @@ return {
         },
         config = function()
             local lsp = require("lsp-zero")
-            lsp.preset("recommended")
             lsp.on_attach(function(_, bufnr)
                 lsp.default_keymaps({ buffer = bufnr })
                 vim.keymap.set('n', 'gd', require("telescope.builtin").lsp_definitions, { buffer = true })
