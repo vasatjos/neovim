@@ -21,6 +21,14 @@ return {
                 expr = true,
                 silent = true
             })
+            vim.api.nvim_create_user_command(
+                "StartCopilot",
+                function()
+                    vim.cmd("Copilot enable")
+                    vim.cmd("Copilot status")
+                end,
+                {}
+            )
         end
     }
 }
