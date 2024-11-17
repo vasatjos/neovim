@@ -59,11 +59,11 @@ return {
                 vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, { buffer = true })
                 vim.keymap.set({ "n", "x" }, "<leader>afm", vim.lsp.buf.format, { buffer = true }) -- [A]uto [f]or[m]at
                 vim.keymap.set('n', 'K', vim.lsp.buf.hover, { buffer = true })
+                vim.keymap.set('n', 'gl', vim.diagnostic.open_float, { buffer = true })
                 vim.keymap.set('n', 'go', require("telescope.builtin").lsp_type_definitions, { buffer = true })
                 vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, { buffer = true })
                 vim.keymap.set('n', '<leader>gr', vim.lsp.buf.rename, { buffer = true })
                 vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, { buffer = true })
-                vim.keymap.set('n', '<leader>sd', vim.diagnostic.open_float, { buffer = true })
                 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { buffer = true })
                 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { buffer = true })
             end)
