@@ -46,6 +46,7 @@ return {
             "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-nvim-lua",
+            "jamesnvc/lsp_server",
         },
         config = function()
             local lsp = require("lsp-zero")
@@ -69,6 +70,28 @@ return {
             end)
             lsp.setup()
             require("lspconfig").racket_langserver.setup({})
+
+            local configs = require('lspconfig/configs')
+            local util = require('lspconfig/util')
+
+            configs.prolog_lsp = {
+                default_config = {
+                    cmd = { "swipl",
+                        "-g", "use_module(library(lsp_server)).",
+                        "-g", "lsp_server:main",
+                        "-t", "halt",
+                        "--", "stdio" },
+                    filetypes = { "prolog" },
+                    root_dir = util.root_pattern("pack.pl"),
+                },
+                docs = {
+                    description = [[
+  https://github.com/jamesnvc/prolog_lsp
+
+  Prolog Language Server
+  ]],
+                }
+            }
         end
     },
     {
