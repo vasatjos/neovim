@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 local map = vim.keymap.set
 
 map("n", "x", '"_x')                 -- don't copy deleted characters
+map("n", "s", '"_s')
 
 map("n", "<leader>sv", "<C-w>v")     -- vertical split
 map("n", "<leader>sh", "<C-w>s")     -- horizontal split
@@ -37,4 +38,5 @@ map("x", "<leader>p", [["_dP]])         -- paste over without replacing clipboar
 map({ "n", "v" }, "<leader>y", [["+y]]) -- system clipboard
 map("n", "<leader>Y", [["+Y]])          -- system clipboard
 map({ "n", "v" }, "<leader>d", [["_d]])
+map({ "n", "v" }, "<leader>c", [["_c]])
 map("n", "Q", "<nop>")
