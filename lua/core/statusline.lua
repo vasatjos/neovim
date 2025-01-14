@@ -64,7 +64,6 @@ local function statusline()
 
         lsp_status,
         set_color_2,
-
         file_name,
 
         modified,
@@ -73,6 +72,7 @@ local function statusline()
         filetype,
 
         percentage,
+
         linecol
     )
 end
