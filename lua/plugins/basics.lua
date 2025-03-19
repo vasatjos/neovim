@@ -40,4 +40,14 @@ return {
             require("colorizer").setup()
         end,
     },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        config = function()
+            require("ibl").setup({
+                scope = {
+                    enabled = false -- don't highlight start of indent block
+                }
+            })
+        end
+    },
 }
