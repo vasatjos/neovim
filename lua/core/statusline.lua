@@ -44,8 +44,15 @@ local function lsp_diagnostics()
     return result
 end
 
+vim.api.nvim_create_autocmd("ColorScheme", {
+    callback = function()
+        vim.api.nvim_set_hl(0, 'GitBranchColor', { fg = '#282828', bg = '#e0bc79' })
+    end,
+})
+
+
 local function statusline()
-    local set_color_1 = "%#Normal#"
+    local set_color_1 = "%#GitBranchColor#"
     local branch = git_branch()
     local lsp_status = lsp_diagnostics()
     local set_color_2 = "%*" -- default color
