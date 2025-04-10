@@ -45,7 +45,7 @@ local function lsp_diagnostics()
 end
 
 local function statusline()
-    local set_color_1 = "%#PmenuSel#"
+    local set_color_1 = "%#Normal#"
     local branch = git_branch()
     local lsp_status = lsp_diagnostics()
     local set_color_2 = "%*" -- default color
