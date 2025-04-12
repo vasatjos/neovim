@@ -165,6 +165,28 @@ local new = {
                 end
             })
         end
+    },
+    {
+        "nvimtools/none-ls.nvim",
+        dependencies = {
+            "williamboman/mason.nvim",
+            "jay-babu/mason-null-ls.nvim"
+        },
+        event = "VeryLazy",
+        config = function()
+            require("mason").setup()
+            require("null-ls").setup()
+            require("mason-null-ls").setup({
+                ensure_installed = {
+                    -- python
+                    "black",
+                    -- web dev
+                    "prettierd",
+                    "eslint_d",
+                },
+                handlers = {},
+            })
+        end
     }
 }
 
