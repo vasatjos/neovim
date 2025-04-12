@@ -3,7 +3,7 @@ return {
     priority = 1000,
     config = function()
         require("onedark").setup({
-            style = "warm",
+            style = "warmer",
             colors = { bg0 = "#282828" }, -- Override default colors
             diagnostics = {
                 darker = false
