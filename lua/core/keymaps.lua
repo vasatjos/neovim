@@ -29,6 +29,9 @@ map({ "n", "v" }, "<leader><leader>p", '"+p') -- paste from system clipboard
 map("n", "<Up>", vim.cmd.cprev)
 map("n", "<Down>", vim.cmd.cnext)
 
+map("n", "<leader><S-Tab>", vim.cmd.tabprev)
+map("n", "<leader><Tab>", vim.cmd.tabnext)
+
 map("n", "J", "mzJ`z")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
