@@ -22,8 +22,8 @@ map("i", "<C-b>", "<C-o>b")
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
 
-map("n", "yA", "ggVGy")                       -- yank all
-map("n", "<leader>yA", 'ggVG"+y')             -- yank all to system clipboard
+map("n", "yA", "ggVGy<C-o>")                  -- yank all
+map("n", "<leader>yA", 'ggVG"+y<C-o>')        -- yank all to system clipboard
 map({ "n", "v" }, "<leader><leader>p", '"+p') -- paste from system clipboard
 
 map("n", "<Up>", vim.cmd.cprev)
