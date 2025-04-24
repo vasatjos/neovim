@@ -52,7 +52,7 @@ return {
                     local opts = { buffer = ev.buf }
                     vim.keymap.set('n', 'gd', builtin.lsp_definitions, opts)
                     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-                    vim.keymap.set("n", "gr", builtin.lsp_references, opts)
+                    vim.keymap.set("n", "<leader>gr", builtin.lsp_references, opts)
                     vim.keymap.set('n', '<leader>ds', builtin.lsp_document_symbols, opts)
                     vim.keymap.set('n', 'gi', builtin.lsp_implementations, opts)
                     vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
@@ -61,7 +61,7 @@ return {
                     vim.keymap.set('n', 'gl', vim.diagnostic.open_float, opts)
                     vim.keymap.set('n', 'go', builtin.lsp_type_definitions, opts)
                     vim.keymap.set('n', 'gs', vim.lsp.buf.signature_help, opts)
-                    vim.keymap.set('n', '<leader>gr', vim.lsp.buf.rename, opts)
+                    vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
                     vim.keymap.set('n', '<F2>', vim.lsp.buf.rename, opts)
                     vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
                     vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
