@@ -87,3 +87,9 @@ vim.api.nvim_create_autocmd({ "DiagnosticChanged", "LspAttach", "BufEnter", "Buf
         vim.cmd("redrawstatus")
     end
 })
+
+local timer = vim.loop.new_timer()
+timer:start(2000, 2000, vim.schedule_wrap(function()
+    vim.opt.statusline = statusline()
+    vim.cmd("redrawstatus")
+end))
