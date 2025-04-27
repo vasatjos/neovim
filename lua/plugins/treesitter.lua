@@ -15,5 +15,12 @@ return {
             })
         end
     },
-    "nvim-treesitter/nvim-treesitter-context",
+    {
+        "nvim-treesitter/nvim-treesitter-context",
+        config = function()
+            require('treesitter-context').setup({
+                max_lines = 5, -- How many lines the window should span. Values <= 0 mean no limit.
+            })
+        end
+    },
 }
