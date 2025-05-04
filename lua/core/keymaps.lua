@@ -43,3 +43,10 @@ map("n", "<leader>Y", [["+Y]])          -- system clipboard
 map({ "n", "v" }, "<leader>d", [["_d]])
 map({ "n", "v" }, "<leader>c", [["_c]])
 map("n", "Q", "<nop>")
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "python",
+  callback = function()
+    map("n", "<leader>ti", "A  # type: ignore<Esc>", { buffer = true, desc = "Append # type: ignore" })
+  end,
+})
