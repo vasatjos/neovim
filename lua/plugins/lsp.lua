@@ -39,11 +39,9 @@ return {
             "williamboman/mason-lspconfig.nvim",
         },
         config = function()
-            local lsp = require("lspconfig")
-            -- default server configs, overrides after loop possible
-            for _, server in ipairs(servers) do
-                lsp[server].setup({})
-            end
+            -- override default configs
+            -- local lsp = require("lspconfig")
+            -- lsp.server_name.setup({})
 
             vim.api.nvim_create_autocmd('LspAttach', {
                 group = vim.api.nvim_create_augroup('UserLspConfig', {}),
