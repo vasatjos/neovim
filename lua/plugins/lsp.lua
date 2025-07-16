@@ -66,6 +66,10 @@ return {
                     vim.keymap.set('i', '<C-s>', vim.lsp.buf.signature_help, opts)
                 end
             })
+            vim.diagnostic.config({
+                virtual_text = true,
+                -- virtual_lines = { current_line = true }
+            })
         end
     },
     {
