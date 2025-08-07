@@ -58,7 +58,6 @@ vim.notify = function(msg, ...)
         return
     end
 
-
     notify(msg, ...)
 end
 
