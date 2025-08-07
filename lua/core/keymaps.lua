@@ -25,8 +25,8 @@ map("v", "K", ":m '<-2<CR>gv=gv")
 map("v", ">", ">gv")
 map("v", "<", "<gv")
 
-map("n", "yA", "ggVGy<C-o>")                  -- yank all
-map("n", "<leader>yA", 'ggVG"+y<C-o>')        -- yank all to system clipboard
+map("n", "yA", "ggVGy")                       -- yank all
+map("n", "<leader>yA", 'ggVG"+y')             -- yank all to system clipboard
 map({ "n", "v" }, "<leader><leader>p", '"+p') -- paste from system clipboard
 
 map("n", "<Up>", vim.cmd.cprev)
@@ -40,16 +40,16 @@ map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
-map("x", "<leader>p", [["_dP]])         -- paste over without replacing clipboard
-map({ "n", "v" }, "<leader>y", [["+y]]) -- system clipboard
-map("n", "<leader>Y", [["+Y]])          -- system clipboard
-map({ "n", "v" }, "<leader>d", [["_d]])
-map({ "n", "v" }, "<leader>c", [["_c]])
+map({ "v", "x" }, "<leader>p", [["_dP]]) -- paste over without replacing clipboard
+map({ "n", "v" }, "<leader>y", [["+y]])  -- system clipboard
+map("n", "<leader>Y", [["+Y]])           -- system clipboard
+map({ "n", "v", "x" }, "<leader>d", [["_d]])
+map({ "n", "v", "x" }, "<leader>c", [["_c]])
 map("n", "Q", "<nop>")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "python",
-  callback = function()
-    map("n", "<leader>ti", "A  # type: ignore<Esc>", { buffer = true, desc = "Append # type: ignore" })
-  end,
+    pattern = "python",
+    callback = function()
+        map("n", "<leader>ti", "A  # type: ignore<Esc>", { buffer = true, desc = "Append # type: ignore" })
+    end,
 })

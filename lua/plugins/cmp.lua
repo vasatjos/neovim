@@ -26,7 +26,7 @@ return {
                 end
             end
 
-            local function under_comparator(entry1, entry2)             -- "lukas-reineke/cmp-under-comparator"
+            local function under_comparator(entry1, entry2) -- "lukas-reineke/cmp-under-comparator"
                 local _, entry1_under = entry1.completion_item.label:find "^_+"
                 local _, entry2_under = entry2.completion_item.label:find "^_+"
                 entry1_under = entry1_under or 0

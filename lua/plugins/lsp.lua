@@ -1,21 +1,3 @@
-local servers = {
-    -- C/C++
-    "clangd",
-    "cmake",
-    -- python
-    "pyright",
-    -- Lua
-    "lua_ls",
-    -- web dev
-    "html",
-    "cssls",
-    "ts_ls",
-    -- shell
-    "bashls",
-    -- rust
-    "rust_analyzer",
-}
-
 return {
     {
         "williamboman/mason.nvim",
@@ -28,7 +10,23 @@ return {
         },
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = servers
+                ensure_installed = {
+                    -- C/C++
+                    "clangd",
+                    "cmake",
+                    -- python
+                    "pyright",
+                    -- Lua
+                    "lua_ls",
+                    -- web dev
+                    "html",
+                    "cssls",
+                    "ts_ls",
+                    -- shell
+                    "bashls",
+                    -- rust
+                    "rust_analyzer",
+                }
             })
         end
     },

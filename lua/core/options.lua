@@ -22,7 +22,6 @@ opt.smartcase = true
 opt.incsearch = true
 opt.hlsearch = true
 
-opt.cursorline = true
 
 opt.swapfile = false
 opt.updatetime = 50
@@ -35,11 +34,9 @@ opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
 opt.colorcolumn = "80"
+opt.cursorline = true
 
 opt.backspace = "indent,eol,start"
-
--- use system clipboard
---opt.clipboard = "unnamedplus"
 
 -- split windows
 opt.splitright = true
