@@ -15,7 +15,7 @@ return {
                     "clangd",
                     "cmake",
                     -- python
-                    "pyright",
+                    "pyright", -- TODO: change to basedpyright
                     -- Lua
                     "lua_ls",
                     -- web dev
@@ -81,7 +81,7 @@ return {
             require("mason-null-ls").setup({
                 ensure_installed = {
                     -- python
-                    "black",
+                    "black", -- TODO: change to ruff
                     -- web dev
                     "prettierd",
                     "eslint_d",
