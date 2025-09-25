@@ -26,6 +26,8 @@ return {
                     "bashls",
                     -- rust
                     "rust_analyzer",
+                    -- julia
+                    "julials"
                 }
             })
         end
@@ -66,6 +68,11 @@ return {
                 virtual_text = true,
                 -- virtual_lines = { current_line = true }
             })
+
+            vim.lsp.config["julials"] = {
+                on_new_config = function(_, _)
+                end
+            }
         end
     },
     {
