@@ -77,7 +77,6 @@ return {
         event = "VeryLazy",
         config = function()
             require("mason").setup()
-            require("null-ls").setup()
             require("mason-null-ls").setup({
                 ensure_installed = {
                     -- python
@@ -88,6 +87,7 @@ return {
                 },
                 handlers = {},
             })
+            require("null-ls").setup()
         end
     }
 }
