@@ -78,3 +78,5 @@ vim.api.nvim_create_autocmd('FileType', {
         vim.opt_local.expandtab = false
     end,
 })
+
+vim.g.filetype_pl = "prolog"
