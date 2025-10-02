@@ -6,6 +6,7 @@ return {
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-cmdline",
+            "kdheepak/cmp-latex-symbols",
             "L3MON4D3/LuaSnip",             -- snippet engine
             "saadparwaiz1/cmp_luasnip",     -- for autocompletion
             "rafamadriz/friendly-snippets", -- useful snippets
@@ -58,6 +59,7 @@ return {
                 -- sources for autocompletion
                 sources = cmp.config.sources({
                     { name = "nvim_lsp" },
+                    { name = "latex_symbols" },
                     { name = "luasnip" }, -- snippets
                     { name = "buffer" },  -- text within current buffer
                     { name = "path" },    -- file system paths
