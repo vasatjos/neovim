@@ -30,9 +30,6 @@ map("n", "<leader>yA", 'ggVG"+y')             -- yank all to system clipboard
 map({ "n", "v" }, "<leader><leader>p", '"+p') -- paste from system clipboard
 map({ "n", "v" }, "<leader><leader>P", '"+P') -- paste from system clipboard
 
-map("n", "<Up>", vim.cmd.cprev)
-map("n", "<Down>", vim.cmd.cnext)
-
 map("n", "<leader><S-Tab>", vim.cmd.tabprev)
 map("n", "<leader><Tab>", vim.cmd.tabnext)
 
