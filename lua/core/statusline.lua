@@ -1,14 +1,5 @@
 -- https://shapeshed.com/vim-statuslines/
 
-local function git_branch()
-    local branch = vim.fn.system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-    if string.len(branch) > 0 then
-        return "󰊢 " .. branch
-    else
-        return " "
-    end
-end
-
 local function lsp_diagnostics()
     local diagnostics = vim.diagnostic.get(0)
     local error_count = 0
@@ -45,10 +36,8 @@ local function lsp_diagnostics()
 end
 
 local function statusline()
-    local set_color_1 = "%#PmenuSel#"
-    local branch = git_branch()
     local lsp_status = lsp_diagnostics()
-    local set_color_2 = "%*" -- default color
+    local reset_color = "%*" -- default color
     local file_name = " %f"
     local modified = "%m"
     local align_right = "%="
@@ -57,16 +46,14 @@ local function statusline()
     local linecol = " %l:%c"
 
     return string.format(
-        "%s %s %s%s%s %s%s %s %s %s ",
-        set_color_1,
+        "%s %s%s %s%s %s %s %s ",
 
-        branch,
-
-        lsp_status,
-        set_color_2,
         file_name,
 
         modified,
+        lsp_status,
+
+        reset_color,
         align_right,
 
         filetype,
