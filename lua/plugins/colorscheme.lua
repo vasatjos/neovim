@@ -22,8 +22,11 @@ return {
             inverse = true, -- invert background for search, diffs, statuslines and errors
             contrast = "",  -- can be "hard", "soft" or empty string
             palette_overrides = {},
+            overrides = {
+                SignColumn = { bg = "#282828" } -- same as editor background
+            },
             dim_inactive = false,
-            transparent_mode = true,
+            transparent_mode = false,
         })
         vim.cmd("colorscheme gruvbox")
     end
