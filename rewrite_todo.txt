@@ -1,0 +1,6 @@
+Rewrite LSP config
+Try blink.cmp (maybe?)
+Telescope -> fzf lua
+Black -> Ruff
+Add AI chat
+Try oil.nvim (maybe?)
