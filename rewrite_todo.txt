@@ -1,7 +1,7 @@
 Rewrite LSP config
 Telescope -> fzf lua
 Black -> Ruff
-Add AI chat / Supermaven / Primeagen 99
+Add AI (Supermaven / Primeagen 99 / opencode)
 
 Try blink.cmp (maybe?)
 Try oil.nvim (maybe?)
