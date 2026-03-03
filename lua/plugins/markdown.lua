@@ -4,9 +4,7 @@ return {
     config = function()
         require("markview").setup({
             typst = {
-                code_blocks = {
-                    enable = false
-                },
+                enable = false,
             },
         })
     end
