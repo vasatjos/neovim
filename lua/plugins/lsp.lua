@@ -26,6 +26,7 @@ return {
                     "bashls",
                     -- rust
                     "rust_analyzer",
+                    "tinymist",
                 }
             })
         end
@@ -37,10 +38,6 @@ return {
             "williamboman/mason-lspconfig.nvim",
         },
         config = function()
-            -- override default configs
-            -- local lsp = require("lspconfig")
-            -- lsp.server_name.setup({})
-
             vim.api.nvim_create_autocmd('LspAttach', {
                 group = vim.api.nvim_create_augroup('UserLspConfig', {}),
                 callback = function(ev)
