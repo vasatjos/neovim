@@ -3,5 +3,6 @@ Telescope -> fzf lua
 Black -> Ruff
 Add AI (Supermaven / Primeagen 99 / opencode)
 
+Try some mini.nvim plugins
 Try blink.cmp (maybe?)
 Try oil.nvim (maybe?)
