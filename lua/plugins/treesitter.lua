@@ -6,7 +6,34 @@ return {
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter").setup()
-            require("nvim-treesitter.install").install({ "c", "cpp", "python", "lua" })
+            require("nvim-treesitter.install").install({
+                "bash",
+                "c",
+                "cpp",
+                "css",
+                "csv",
+                "diff",
+                "gitattributes",
+                "gitcommit",
+                "git_config",
+                "gitignore",
+                "git_rebase",
+                "html",
+                "javascript",
+                "json",
+                "julia",
+                "lua",
+                "make",
+                "markdown",
+                "python",
+                "r",
+                "racket",
+                "rust",
+                "sql",
+                "typescript",
+                "typst",
+                "vim"
+            })
         end
     },
     {
