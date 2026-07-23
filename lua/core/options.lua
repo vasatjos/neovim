@@ -53,10 +53,6 @@ vim.notify = function(msg, ...)
     if msg:match("^%[null%-ls%] failed to run generator:") then
         return
     end
-    -- LSP telescope nvim 0.11 warnings
-    if msg:match("position_encoding param is required in vim.lsp.util.make_position_params. Defaulting to position encoding of the first client.") then
-        return
-    end
 
     notify(msg, ...)
 end
