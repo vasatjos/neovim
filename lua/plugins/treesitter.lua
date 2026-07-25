@@ -6,6 +6,17 @@ return {
         build = ":TSUpdate",
         config = function()
             require("nvim-treesitter").setup()
+
+            vim.api.nvim_create_autocmd("FileType", {
+                callback = function()
+                    local ok, _ = pcall(vim.treesitter.start)
+                    if not ok then
+                        -- Fallback to regex-based highlighting if no parser available
+                        vim.cmd("syntax enable")
+                    end
+                end,
+            })
+
             require("nvim-treesitter.install").install({
                 "bash",
                 "c",
