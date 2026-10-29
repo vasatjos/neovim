@@ -75,11 +75,4 @@ vim.api.nvim_create_autocmd('FileType', {
     end,
 })
 
-vim.api.nvim_create_autocmd({"FileType", "BufEnter", "BufWinEnter" }, {
-    pattern = "*.typ",
-    callback = function()
-        vim.opt_local.conceallevel = 0
-    end,
-})
-
 vim.g.filetype_pl = "prolog"
